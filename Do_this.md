@@ -1,4 +1,4 @@
-# GPS-Tracker-VS-Code-Part
+GPS-Tracker-VS-Code-Part
 #
 
 const char* ssid = "name";         //your wifi name
