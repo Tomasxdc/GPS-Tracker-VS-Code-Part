@@ -54,7 +54,7 @@ void loop() {
 
   // Displej data
   M5.Lcd.setCursor(80, 15);
-  M5.Lcd.println("GPS TEST");
+  M5.Lcd.println("GPS Tracker");
 
   M5.Lcd.setCursor(30, 50);
   M5.Lcd.printf("Lng: %5.5f", gps.location.lng());
@@ -63,7 +63,7 @@ void loop() {
   M5.Lcd.printf("Lat: %5.5f",  gps.location.lat());
 
   M5.Lcd.setCursor(30, 90); 
-  M5.Lcd.printf("Sat: %i", gps.satellites.value());
+  M5.Lcd.printf("Sat: %%%i", gps.satellites.value());
 
   DynamicJsonDocument doc(1024);
   doc["lng"] = gps.location.lng();
