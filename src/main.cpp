@@ -63,8 +63,8 @@ void loop() {
   M5.Lcd.printf("Lat: %5.5f",  gps.location.lat());
 
   M5.Lcd.setCursor(30, 90); 
-  M5.Lcd.printf("Sat: %%%i", gps.satellites.value());
-
+  M5.Lcd.printf("Sat: %i", constrain(gps.satellites.value(), 0, 33));
+  
   DynamicJsonDocument doc(1024);
   doc["lng"] = gps.location.lng();
   doc["lat"] = gps.location.lat();
